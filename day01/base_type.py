@@ -1,6 +1,7 @@
 # model 模块 main 主要的
 # print 打印 def 声明方法 int 整数 demo 例子
 # class 类型,类 str (string)字符串
+# ctrl+k commit 代码
 
 def int_demo():
     aint = 1
@@ -39,5 +40,5 @@ def float_demo():
     afloat=1.33
     print(afloat)
     print(type(afloat))
-    
+
     pass
