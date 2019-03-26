@@ -21,6 +21,9 @@ def login():
 
 #     查看订单列表
     get_list = requests.get('http://192.168.60.132/order/list', headers=head)
+    list_json = get_list.json()
+    print(list_json)
+
 
 
 if __name__ == '__main__':
