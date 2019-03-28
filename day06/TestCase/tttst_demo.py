@@ -1,9 +1,5 @@
-import pytest
 import allure
-from Common import Assert
-from Common import Request
-import requests
-import json
+from day06.Common import Request, Assert
 
 # 新建一个 Assert.Assertions() 的对象 对象名: assertions
 assertions = Assert.Assertions()
@@ -53,7 +49,7 @@ class TestLogin(object):
         delivery_data = [{"deliveryCompany": "顺丰快递", "deliverySn": "5896545", "orderId": "21"}]
         request_post_request = request.post_request(url=url+'/order/update/delivery',headers=head, json=delivery_data)
         assertions.assert_code(request_post_request.status_code,200)
-        code = request_post_request.json('code')
+        code = request_post_request.json(['code'])
         assertions.assert_code(code,200)
 
 
@@ -63,5 +59,5 @@ class TestLogin(object):
          ids_ = {'ids': '27'}
          request_get_request = request.get_request(url=url + '/order/delete', params=ids_, headers=head)
          assertions.assert_code(request_get_request.status_code, 200)
-         # request_json = request_get_request.json()['code']
-         # assertions.assert_code(request_json,200)
+         request_json = request_get_request.json(['code'])
+         assertions.assert_code(request_json,200)

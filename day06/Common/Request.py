@@ -3,11 +3,9 @@
 封装request
 """
 
-import os
-import random
 import requests
-from Common import Log
-from Common.Consts import *
+from day06.Common import Log
+from day06.Common.Consts import *
 
 
 class Request:

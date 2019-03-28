@@ -3,8 +3,7 @@
 封装Assert方法
 
 """
-from Common import Log
-from Common import Consts
+from day06.Common import Log
 import json
 
 
