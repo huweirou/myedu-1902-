@@ -44,7 +44,7 @@ class Assertions:
             self.log.error("Response body msg != expected_msg, expected_msg is %s, body_msg is %s" % (expected_msg, body_msg))
 
             raise
-
+    @classmethod
     def assert_in_text(self, body, expected_msg):
         """
         验证response body中是否包含预期字符串
@@ -53,8 +53,11 @@ class Assertions:
         :return:
         """
         try:
+
             text = json.dumps(body, ensure_ascii=False)
+
             # print(text)
+
             assert expected_msg in text
             return True
 
