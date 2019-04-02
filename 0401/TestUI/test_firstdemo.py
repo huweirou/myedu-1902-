@@ -68,6 +68,9 @@ class Test1 :
         assertions = Assertions()
         assertions.assert_in_text(driver.page_source, '全品类')
 
+
+
+
         # 退出
         driver.quit()
         pass
