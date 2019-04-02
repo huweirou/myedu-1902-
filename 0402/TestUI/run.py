@@ -6,12 +6,12 @@
 # '--allure_stories=测试模块_demo1, 测试模块_demo2'
 # '--allure_features=测试features'
 """
-import sys
 
 import pytest
 
-from day06.Common import Log
-from day06.Common import Shell
+from Common import Log
+from Common import Shell
+
 # from Conf import Config
 
 if __name__ == '__main__':
@@ -23,7 +23,7 @@ if __name__ == '__main__':
     html_report_path = './Report/html/'
 
 
-    pytest.main(['-s', '-q', '--alluredir',xml_report_path,'./TestCase'])
+    pytest.main(['-s', '-q', '--alluredir',xml_report_path,'.'])
 
     cmd = "allure generate %s -o %s --clean"%(xml_report_path,html_report_path)
 

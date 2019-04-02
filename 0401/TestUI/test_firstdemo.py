@@ -1,10 +1,8 @@
-import selenium
-from selenium import webdriver
 from selenium import webdriver
 import time
 import os
 
-from day06.Common.Assert import Assertions
+from Common.Assert import Assertions
 
 
 class Test1 :

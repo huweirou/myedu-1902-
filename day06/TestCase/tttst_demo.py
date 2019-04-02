@@ -1,5 +1,5 @@
 import allure
-from day06.Common import Request, Assert
+from Common import Request, Assert
 
 # 新建一个 Assert.Assertions() 的对象 对象名: assertions
 assertions = Assert.Assertions()

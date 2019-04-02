@@ -1,7 +1,7 @@
 import allure
 import pytest
-from day06.Common import read_excel
-from day06.Common import Request, Assert
+from Common import read_excel
+from Common import Request, Assert
 
 assertions = Assert.Assertions()
 
