@@ -36,7 +36,6 @@ class TestLogin(object):
     @allure.story("获取用户信息")
     def test_case_info(self):
         get_info_resp = request.get_request(url=url+'/admin/info', headers=head)
-
         assertions.assert_code( get_info_resp.status_code,400)
 
     @allure.story("订单列表")
